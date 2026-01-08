@@ -1,0 +1,14 @@
+function stopRecording() {
+  beatAudio.pause();
+  mediaRecorder.stop();
+}
+function saveRecording() {
+  const blob = new Blob(chunks, { type: "audio/webm" });
+  chunks = [];
+
+  const url = URL.createObjectURL(blob);
+  const playback = new Audio(url);
+  playback.controls = true;
+
+  document.body.appendChild(playback);
+}
