@@ -1,0 +1,10 @@
+async function startRecording() {
+  await initAudio();
+  await setupRecorder();
+  await countIn();
+
+  beatAudio.currentTime = 0;
+  beatAudio.play();
+
+  mediaRecorder.start();
+}
