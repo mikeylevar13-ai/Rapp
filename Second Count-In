@@ -1,0 +1,6 @@
+async function countIn() {
+  for (let i = 3; i > 0; i--) {
+    console.log(i); // replace with UI later
+    await new Promise(r => setTimeout(r, 1000));
+  }
+}
