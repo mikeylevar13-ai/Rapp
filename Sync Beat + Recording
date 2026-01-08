@@ -1,0 +1,9 @@
+document.getElementById("start").onclick = () => {
+  document.getElementById("beat").play();
+  mediaRecorder.start();
+};
+
+document.getElementById("stop").onclick = () => {
+  document.getElementById("beat").pause();
+  mediaRecorder.stop();
+};
